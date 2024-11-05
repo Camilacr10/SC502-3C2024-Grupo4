@@ -13,6 +13,30 @@ header {
     background-size: cover;
     background-position: center;
     height: 800px;
+    background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.welcome-section3 {
+    background-image: url('img/fondoContacto.jfif'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.welcome-section1 {
+    background-image: url('img/fondoAdopciones.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    margin-bottom: 100px;
+    
 }
 
 .btn-dark, .btn-custom{
@@ -51,8 +75,25 @@ header {
 .banner{
     margin-top: 160px;
     margin-right: 1dvh;
+    background-color: rgba(0, 0, 0, 0.055);
+    height: 450px;
     
 }
+.banner3{
+    margin-top: 160px;
+    margin-right: 1dvh;
+    height: 450px;
+    text-align: center;
+
+}
+
+.banner2{
+    margin-top: 90px;
+    margin-right: 1dvh;
+    
+}
+
+
 
 .text1{
     font-size: 70px;
@@ -89,4 +130,191 @@ header {
 
 .btn-custom:hover {
     background-color: #d97719;
+}
+
+.contenedor {
+    position: relative;
+    display: inline-block;
+    margin-top: -200px;
+  }
+
+  /* Imagen de fondo */
+  .contenedor img {
+    width: 100%; /* Ajusta el tamaño al contenedor */
+    height: auto;
+  }
+
+  /* Estilo del texto sobre la imagen */
+  .contenedor h1 {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+.pet-card {
+  background-color: #fdd835;
+  border-radius: 15px;
+}
+
+.pet-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: -75px;
+  border: 5px solid #ffffff;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-info {
+  background-color: #d2691e;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.card-body{
+   float: left;
+     .btn-primary{
+        background-color: #d2691e;
+        border: none;
+
+     }
+}
+
+.card-custom {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.img-custom {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: -30px;
+}
+
+.img-left {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-right {
+    right: -30px;
+}
+
+.text-section {
+    font-size: 1rem;
+    color: #333;
+    padding: 20px;
+}
+
+.title-section {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-mission {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+   
+}
+
+.card-mission h5 {
+    font-weight: bold;
+}
+
+.card-mission p {
+    font-size: 1rem;
+    color: #333;
+    border-right: none;
+
+}
+
+.page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+.contact-container {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.contact-info {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffc107;
+    color: #333;
+    height: 200px;
+    color: #ffffff;
+}
+.contact-title {
+    margin-top: 0;
+    font-size: 24px;
+}
+.contact-form-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-button:hover {
+    background-color: #e0a800;
+}
+.info-title {
+    margin-top: 0;
+    font-size: 20px;
+}
+.info-item {
+    margin: 10px 0;
 }
