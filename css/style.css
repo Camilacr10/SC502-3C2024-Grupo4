@@ -9,7 +9,7 @@ header {
 
 
 .welcome-section {
-    background-image: url('img/fondoIndex.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url('../img/fondoIndex.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -20,7 +20,7 @@ header {
 }
 
 .welcome-section3 {
-    background-image: url('img/fondoContacto.jfif'); /* Ruta de la imagen de fondo */
+    background-image: url('../img/fondoContacto.jfif'); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -31,7 +31,7 @@ header {
 }
 
 .welcome-section1 {
-    background-image: url('img/fondoAdopciones.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url('../img/fondoAdopciones.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -318,219 +318,3 @@ header {
 .info-item {
     margin: 10px 0;
 }
-
-/* *******************************
-
-Estilos listadoMascotas 
-
-*********************************/
-
-.welcome-section-listado-mascotas {
-    background-image: url('img/banner.png');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.banner-img {
-    transform: scale(1.4);
-    margin-left: 200px;
-}
-
-.title-text {
-    font-size: 3.3rem;
-    font-weight: bold;
-    margin-top: -3rem;
-    color: white;
-}
-
-.titulo-todos {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 7dvh;
-    margin-left: 6rem;
-    margin-bottom: 30px;
-}
-
-.sidebar {
-    background-color: white;
-    border: #333;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-left: 50px;
-    margin-right: 30px;
-}
-
-.filter-title {
-    margin-left: 35px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.form-check-label {
-    margin-left: 20px;
-    font-size: 1rem;
-}
-
-.pet-card img {
-    height: 320px;
-    transform: translateY(-15%);
-}
-
-.pet-card .pet-info {
-    margin-top: 110px;
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 2rem;
-    font-weight: bold;
-    transform: translateX(-0%); 
-    transform: translateY(-200%);
-
-}.pet-card {
-    background-color: #edb516;
-    border-radius: 50px;
-    padding: 15px;
-    height: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* *******************************
-
-Estilos PerfilMascota 
-
-*********************************/
-
-.welcome-section-perfil-mascota {
-    background-image: url('img/banner.png');
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.title-text-perfil-mascota {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: -6rem;
-    color: white;
-}
-
-/* Círculos peso, edad, sexo */
-.info-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.info-item {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon-circle {
-    background-color: #f6cf5e;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-}
-
-.icon-img {
-    width: 45px;
-    height: auto;
-}
-
-.info-text {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Datos médicos */
-
-.box-group {
-    gap: 30px;
-}
-
-.box {
-    background-color: #fff;
-    width: 35%;
-    height: 70%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-}
-
-.box-img {
-    width: 45px;
-    height: 45px;
-}
-
-.box-title {
-    font-weight: bold;
-}
-
-.box.empty {
-    width: 40%;
-    height: 150px;
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-}
-
-/* Requisitos */
-
-.box-container {
-    height: 500px;
-    background-color: #f6cf5e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-}
-
-.title {
-    margin-top: 10px;
-    margin-left: 30px;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.divider {
-    margin-left: 20px;
-    margin-right: 50px;
-}
-
-.requirements-list {
-    list-style-type: disc;
-    padding: 20px;
-}
-
-.requirement-item {
-    margin-left: 30px;
-    margin-right: 50px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
