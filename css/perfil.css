@@ -1,0 +1,127 @@
+/* Estilo general del perfil */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Eliminar los márgenes predeterminados */
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    height: 100%; /* Asegura que ocupe toda la altura */
+    flex-direction: row; /* Para tener el menú y el contenido en fila */
+    overflow: hidden; /* Evitar desbordamientos si el contenido es grande */
+    margin-top: 50px; /* Ajusta la posición del contenedor principal */
+}
+
+/* Menú Lateral */
+.menu-lateral {
+    width: 250px;
+    background-color: #ffb411fa; /* Fondo del menú */
+    padding: 20px;
+    border-radius: 8px;
+    color: #000000; /* Texto negro para el menú */
+    flex-shrink: 0; /* Evita que el menú se reduzca en tamaño */
+    position: fixed; /* Fija el menú al lado izquierdo */
+    height: 100%; /* Asegura que el menú ocupe toda la altura */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Coloca el menú debajo del navbar */
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    margin-bottom: 20px;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Color fijo de los enlaces */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Estilo de los botones */
+.menu-lateral ul li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ff7b00; /* Color de fondo de los botones */
+    color: white; /* Texto blanco */
+}
+
+.menu-lateral ul li a:hover {
+    background-color: #e64a19; /* Color más oscuro al hacer hover */
+}
+
+/* Botón adicional para ir al index */
+.menu-lateral ul li#btn-index a {
+    background-color: #00bfae; /* Color del botón */
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/* Ocultar botones adicionales (solo 3 visibles) */
+.menu-lateral ul li:nth-child(n+5) {
+    display: none;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex-grow: 1;
+    margin-left: 250px; /* Deja espacio para el menú lateral */
+    padding: 30px;
+    margin-top: -50px; /* Mueve el contenido más arriba */
+    height: calc(100vh - 20px); /* Ajusta la altura para que el contenido no se superponga al navbar */
+    overflow-y: auto; /* Permite desplazamiento si el contenido excede la altura */
+    background-color: #f9f9f9;
+}
+
+/* Otros estilos del contenido */
+h2 {
+    color: #ff6600;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #e67c26;
+    font-weight: bold;
+}
+
+.text-muted {
+    color: #000000;
+}
+
+/* Estilo para la fila de tarjetas */
+.row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para la imagen del perfil */
+.img-fluid {
+    margin-bottom: 20px;
+    border: 3px solid #ff6600;
+}
+
+/* Estilo para el texto de "usuario" */
+.username {
+    display: block;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+}

@@ -1,0 +1,148 @@
+/* Asegura que el formulario ocupe toda la altura de la pantalla */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diseño del formulario de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px; /* Limita el ancho del formulario */
+    width: 100%;
+}
+
+.login-logo {
+    max-width: 250px; /* Ajusta el tamaño del logo */
+    margin-bottom: 15px;
+}
+
+.login-text {
+    font-size: 1.8rem; /* Reducido para mejorar visibilidad */
+    margin-bottom: 5px;
+}
+
+.login-title {
+    font-size: 2.2rem; /* Ajuste para mejorar visibilidad */
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+.form-group {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.form-control {
+    font-size: 1.2rem; /* Fuente más pequeña para mejorar ajuste */
+    padding: 0.8rem;
+    height: 45px; /* Altura ajustada para mejorar el diseño */
+}
+
+/* Estilos para el botón */
+.btn-container .btn {
+    font-size: 1.5rem; /* Tamaño de texto ajustado */
+    padding: 1rem 2rem; /* Ajuste en el padding para mayor consistencia */
+    background-color: #FFB300;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Estilo para el enlace de "Olvidé mi contraseña" */
+.forget-password {
+    font-size: 1.2rem;
+    text-align: right;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.forget-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el enlace "Sign Up" */
+.signup-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la imagen */
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Diseño responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .login-logo {
+        max-width: 200px; /* Ajuste para pantallas pequeñas */
+    }
+    
+    .login-text {
+        font-size: 1.6rem;
+    }
+
+    .login-title {
+        font-size: 2rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-container .btn {
+        font-size: 1.2rem;
+    }
+
+    .forget-password, .signup-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 0 10px; /* Ajuste de padding para pantallas más pequeñas */
+    }
+
+    .login-form {
+        padding: 10px;
+    }
+
+    .login-text {
+        font-size: 1.5rem;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .btn-container .btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .signup-text {
+        font-size: 1.1rem;
+    }
+}

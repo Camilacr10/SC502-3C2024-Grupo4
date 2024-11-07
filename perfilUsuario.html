@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+
+    <nav class="navbar d-none d-md-flex" style="padding-left: 10px;">
+        <ul class="nav">
+            <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de Nosotros</a></li>
+            <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de Mascotas</a></li>
+            <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a></li>
+            <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a></li>
+        </ul>        
+    </nav>
+
+    <div class="container my-2 d-flex">
+        <div class="menu-lateral">
+            <ul>
+                <li><a href="donaciones.html">Donaciones</a></li>
+                <li><a href="#">Configuraciones</a></li>
+                <li><a href="login.html">Cerrar Sesión</a></li>
+                <li><a href="Index.html">Volver al index</a></li>
+            </ul>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="contenido-principal ms-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <!-- Foto de perfil -->
+                    <img src="img/usuario/usuaria.png" alt="Foto de perfil" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    <span class="username">Usuario3245</span>
+
+                    <!-- Carrusel de imágenes -->
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/listadoMascotas/Charlie.png" class="d-block w-25 mx-auto" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/listadoMascotas/Leo.png" class="d-block w-25 mx-auto" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/listadoMascotas/Tom.png" class="d-block w-25 mx-auto" alt="Imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Sección de información -->
+                    <h2 class="my-3">Sobre mí</h2>
+                    <p class="text-muted">Hola, soy un amante de los animales y me dedico a ayudar a los refugios a encontrar hogares para los animales necesitados.</p>
+
+                    <!-- Estadísticas -->
+                    <div class="row my-4">
+                        <div class="col-4">
+                            <h4>Followers</h4>
+                            <p><strong>3,276</strong></p>
+                        </div>
+                        <div class="col-4">
+                            <h4>Donaciones</h4>
+                            <p><strong>45</strong></p>
+                        </div>
+                        <div class="col-4">
+                            <h4>Hogares Encontrados</h4>
+                            <p><strong>128</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Información personal -->
+                    <div class="my-4">
+                        <p><strong>Correo Electrónico:</strong> usuario@example.com</p>
+                        <p><strong>Número de Teléfono:</strong> +123 456 789</p>
+                        <p><strong>Fecha de Registro:</strong> 12 de marzo de 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
