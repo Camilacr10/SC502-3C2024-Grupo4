@@ -12,70 +12,67 @@
 </head>
 
 <body>
-    <div>
-        <div class="welcome-section-donaciones">
-            <header>
-                <div class="container d-flex justify-content-between align-items-center py-2">
-                    <a href="Index.html" class="nav-link text-light"><img src="img/logo.png" alt="Logo"
-                            style="width: 100px;"></a>
-                    <nav class="d-none d-md-flex" style="padding-left: 10px;">
-                        <ul class="nav">
-                            <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de
-                                    Nosotros</a></li>
-                            <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de
-                                    Mascotas</a></li>
-                            <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a>
-                            </li>
-                            <li class="nav-item"><a href="perfilAdopciones.html"
-                                    class="nav-link text-light">Adopciones</a></li>
-                        </ul><button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar
-                            Sesión</button>
-                    </nav>
+    <div class="welcome-section-donaciones">
+        <header>
+            <div class="container d-flex justify-content-between align-items-center py-2">
+                <a href="Index.html" class="nav-link text-light"><img src="img/adopciones/logo.png" alt="Logo"
+                        style="width: 100px;"></a>
+                <nav class="d-none d-md-flex" style="padding-left: 10px;">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de
+                                Nosotros</a></li>
+                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de
+                                Mascotas</a></li>
+                        <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a>
+                        </li>
+                        <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a>
+                        </li>
+                    </ul><button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar
+                        Sesión</button>
+                </nav>
 
-                </div>
-            </header>
-
-            <section>
-                <br><br><br>
-                <div class="d-flex justify-content-between" style="height: 270px;">
-                    <div class="p-2 flex-shrink-1">
-                        <p class="title-text-donacionesM"><a href="donaciones.html"
-                                style="text-decoration: none; color: white; font-size: 2.5rem;">
-                                <i class="fas fa-chevron-left" style="margin-right: 20px;"></i>
-                            </a>Donaciones</p>
-                        <p class="sub-text-donacionesM">¡Gracias por ayudarnos a continuar nuestra labor!</p>
-                    </div>
-
-                    <div class="p-2 w-50">
-                        <img src="img/donaciones/mascotasBanner.png" alt="mascotas-banner"
-                            class="banner-img-donacionesM">
-                    </div>
-                </div>
-            </section>
-
-            <div>
-                <h1 class="titulo-todos">¡Tu contribución es muy importante!</h1>
             </div>
-        </div>
+        </header>
 
-        <h2 class="text-center mb-4" style="font-weight: bold; transform: translateY(560%);">Formulario de Pago</h2>
-
-        <div class="container"
-            style="height: 770px; width: 800px; background-color: #f7f7f7; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 130px; padding: 0; border-radius: 40px;">
-            <div class="col-12 col-md-9 col-lg-7" style="transform: translateX(35%)">
-
-                <div style="margin-bottom: -40px;">
-                    <img src="img/donaciones/formulario-img.png" alt="mascotas-banner"
-                        style="height: 150px; transform: translateX(85%) translateY(-95%);">
+        <section>
+            <div class="d-flex justify-content-between mb-5">
+                <div class="p-4">
+                    <br><br><br>
+                    <p class="title-text"><a href="donaciones.html" class="title-text">
+                            <i class="fas fa-chevron-left" style="margin-right: 20px;"></i>
+                        </a>Donaciones</p>
+                    <p class="sub-text">¡Gracias por ayudarnos a continuar nuestra labor!</p>
                 </div>
+                <div class="p-4">
+                    <img src="img/donaciones/mascotasBanner.png" alt="mascotas-banner" class="banner-img-donaciones">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <br><br><br>
+        <h1 class="titulo-todos">¡Tu contribución es muy importante!</h1>
+    </div>
+
+    <div>
+        <img src="img/donaciones/formulario-img.png" alt="mascotas-banner" class="img-fluid"
+            style="max-height: 150px; object-fit: contain; justify-content: right; margin-left: 50%;">
+
+        <div class="container py-4"
+            style="background-color: #f7f7f7; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 40px; max-width: 700px;">
+            <h2 class="text-center mb-3" style="font-weight: bold;">Formulario de Pago</h2>
+
+            <div class="col-12 mx-auto p-4">
 
                 <form id="donationForm">
+
                     <div class="row mb-3">
                         <div class="col-12">
                             <label for="donationAmount" class="form-label">Monto de la Donación ($)</label>
                             <input type="number" class="form-control" id="donationAmount"
                                 placeholder="Ingrese el monto en dólares" required
-                                style="border-radius: 30px; height: 45px; font-size: 1.1rem;" min="1">
+                                style="border-radius: 30px; height: 40px; font-size: 1.1rem;" min="1">
                         </div>
                     </div>
 
@@ -84,7 +81,7 @@
                             <label for="cardNumber" class="form-label">Número de tarjeta</label>
                             <input type="text" class="form-control" id="cardNumber"
                                 placeholder="Ingrese el número de tarjeta" required
-                                style="border-radius: 30px; height: 45px; font-size: 1.1rem;">
+                                style="border-radius: 30px; height: 40px; font-size: 1.1rem;">
                         </div>
                     </div>
 
@@ -92,12 +89,12 @@
                         <div class="col-md-6">
                             <label for="expirationDate" class="form-label">Fecha de Expiración</label>
                             <input type="month" class="form-control" id="expirationDate" required
-                                style="border-radius: 30px; height: 45px; font-size: 1.1rem;">
+                                style="border-radius: 30px; height: 40px; font-size: 1.1rem;">
                         </div>
                         <div class="col-md-6">
                             <label for="securityCode" class="form-label">Código de Seguridad</label>
                             <input type="text" class="form-control" id="securityCode" placeholder="CVC" required
-                                style="border-radius: 30px; height: 45px; font-size: 1.1rem;">
+                                style="border-radius: 30px; height: 40px; font-size: 1.1rem;">
                         </div>
                     </div>
 
@@ -106,72 +103,72 @@
                             <label for="cardholderName" class="form-label">Nombre del Titular</label>
                             <input type="text" class="form-control" id="cardholderName"
                                 placeholder="Ingrese el nombre del titular" required
-                                style="border-radius: 30px; height: 45px; font-size: 1.1rem;">
+                                style="border-radius: 30px; height: 40px; font-size: 1.1rem;">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-12">
                             <label for="donationMessage" class="form-label">¡Déjanos un mensaje con tu donación!</label>
-                            <textarea class="form-control" id="donationMessage" rows="4"
+                            <textarea class="form-control" id="donationMessage" rows="3"
                                 placeholder="Escribe aquí tu mensaje..." required
-                                style="border-radius: 30px; height: 120px; font-size: 1.1rem;"></textarea>
+                                style="border-radius: 30px; height: 100px; font-size: 1.1rem;"></textarea>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 text-center">
                             <button class="btn btn-warning rounded-pill"
-                                style="margin-top: 20px; height: 55px; width: 280px; font-size: 1.4rem; font-weight: bold;"
-                                data-bs-toggle="modal" data-bs-target="#successModal">Completar
-                                Donación</button>
+                                style="margin-top: 20px; height: 50px; width: 250px; font-size: 1.4rem; font-weight: bold;"
+                                data-bs-toggle="modal" data-bs-target="#successModal">Completar Donación</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+    </div>
 
-        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="successModalLabel" style="font-weight: bold;">¡Donación exitosa!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="img/donaciones/modal.png" alt="donacionExitosa" class="img-fluid">
-                    </div>
-                    <div class="modal-footer">
-                        <a href="donaciones-monetarias.html" class="btn btn-warning">Volver</a>
-                    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel" style="font-weight: bold;">¡Donación exitosa!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/donaciones/modal.png" alt="donacionExitosa" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <a href="donaciones-monetarias.html" class="btn btn-warning">Volver</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer class="footer bg-warning text-white py-4 mt-5">
-            <div class="container text-center">
-                <p>&copy; Derechos Reservados</p>
-                <div class="social-icons d-flex justify-content-center mt-3">
-                    <a href="#" class="mx-2"><img src="img/adopciones/logoFacebook.svg" alt="Facebook" class="icon"></a>
-                    <a href="#" class="mx-2"><img src="img/adopciones/logoInsta.png" alt="Instagram" class="icon"></a>
-                    <a href="#" class="mx-2"><img src="img/adopciones/logoTwitter.svg" alt="Twitter" class="icon"></a>
-                </div>
+    <footer class="footer bg-warning text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; Derechos Reservados</p>
+            <div class="social-icons d-flex justify-content-center mt-3">
+                <a href="#" class="mx-2"><img src="img/adopciones/logoFacebook.svg" alt="Facebook" class="icon"></a>
+                <a href="#" class="mx-2"><img src="img/adopciones/logoInsta.png" alt="Instagram" class="icon"></a>
+                <a href="#" class="mx-2"><img src="img/adopciones/logoTwitter.svg" alt="Twitter" class="icon"></a>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script>
-            document.getElementById('donationForm').addEventListener('submit', function (event) {
-                event.preventDefault();
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-                const form = this;
-                if (form.checkValidity()) {
-                    const modal = new bootstrap.Modal(document.getElementById('successModal'));
-                    modal.show();
-                } else {
-                    form.reportValidity();
-                }
-            });
-        </script>
+            const form = this;
+            if (form.checkValidity()) {
+                const modal = new bootstrap.Modal(document.getElementById('successModal'));
+                modal.show();
+            } else {
+                form.reportValidity();
+            }
+        });
+    </script>
 </body>
 
 </html>

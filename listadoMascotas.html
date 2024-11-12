@@ -12,185 +12,205 @@
 </head>
 
 <body>
+
+    <div class="welcome-section-listado-mascotas">
+        <header>
+            <div class="container d-flex justify-content-between align-items-center py-2">
+                <a href="Index.html" class="nav-link text-light"><img src="img/adopciones/logo.png" alt="Logo"
+                        style="width: 100px;"></a>
+                <nav class="d-none d-md-flex" style="padding-left: 10px;">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de
+                                Nosotros</a></li>
+                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de
+                                Mascotas</a></li>
+                        <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a>
+                        </li>
+                        <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a>
+                        </li>
+                    </ul><button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar
+                        Sesión</button>
+                </nav>
+
+            </div>
+        </header>
+
+        <section>
+            <br><br><br>
+            <div class="d-flex justify-content-between">
+                <div class="p-4 w-50">
+                    <img src="img/adopciones/perroygato.png" alt="Perro-y-gato-banner" class="banner-img">
+                </div>
+                <div class="p-2 flex-shrink-1">
+                    <p class="title-text p-4"><b>Conocé a nuestros peluditos</b></p>
+                </div>
+            </div>
+        </section>
+    </div>
     <div>
-        <div class="welcome-section-listado-mascotas">
-            <header >
-                <div class="container d-flex justify-content-between align-items-center py-2">
-                    <a href="Index.html" class="nav-link text-light"><img src="img/adopciones/logo.png" alt="Logo" style="width: 100px;"></a>
-                    <nav class="d-none d-md-flex" style="padding-left: 10px;" >
-                        <ul class="nav" >
-                            <li class="nav-item" ><a href="acercaNosotros.html" class="nav-link text-light">Acerca de Nosotros</a></li>
-                            <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de Mascotas</a></li>
-                            <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a></li>
-                            <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light" >Adopciones</a></li>
-                        </ul><button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar Sesión</button>
-                        
-                    </nav>
+        <h1 class="titulo-todos">&gt; Todos</h1>
+    </div>
 
-                </div>
-            </header>
+    <div class="d-flex justify-content-between" style="margin-left: 30px;">
 
-            <section>
-                <br><br><br>
-                <div class="d-flex">
-                    <div class="p-2 w-75">
-                        <img src="img/adopciones/perroygato.png" alt="Perro-y-gato-banner" class="banner-img">
+
+        <aside class="col-md-2 col-12 p-4 sidebar">
+            <form>
+                <div class="mb-3">
+                    <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Especie</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="perro"
+                            name="tipo" value="perro">
+                        <label class="form-check-label" for="perro">Perros</label>
                     </div>
-                    <div class="p-2 flex-shrink-1 title-text">
-                        Conocé a nuestros peluditos
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="gato" name="tipo"
+                            value="gato">
+                        <label class="form-check-label" for="gato">Gatos</label>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <div>
-            <h1 class="titulo-todos">&gt; Todos</h1>
-        </div>
+                <hr class="separator">
 
-        <div class="container-fluid" style="margin-left: 30px;">
-            <div class="row">
+                <div class="mb-3">
+                    <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Raza</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="golden-retriever"
+                            name="Raza" value="golden-retriever">
+                        <label class="form-check-label" for="golden-retriever">Golden Retriever</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Poodle"
+                            name="Raza" value="Poodle">
+                        <label class="form-check-label" for="Poodle">Poodle</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Beagle"
+                            name="Raza" value="Beagle">
+                        <label class="form-check-label" for="Beagle">Beagle</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Chihuahua"
+                            name="Raza" value="Chihuahua">
+                        <label class="form-check-label" for="Chihuahua">Chihuahua</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Siamés"
+                            name="Raza" value="Siamés">
+                        <label class="form-check-label" for="Siamés">Siamés</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Persa"
+                            name="Raza" value="Persa">
+                        <label class="form-check-label" for="Persa">Persa</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Ragdoll"
+                            name="Raza" value="Ragdoll">
+                        <label class="form-check-label" for="Ragdoll">Ragdoll</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Otro" name="Raza"
+                            value="Otro">
+                        <label class="form-check-label" for="Otro">Otro</label>
+                    </div>
 
-                <aside class="col-md-2 col-12 p-4 sidebar">
-                    <form>
-                        <div class="mb-3">
-                            <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Especie</h2>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="perro" name="tipo" value="perro">
-                                <label class="form-check-label" for="perro">Perros</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="gato" name="tipo" value="gato">
-                                <label class="form-check-label" for="gato">Gatos</label>
-                            </div>
-                        </div>
+            </form>
+        </aside>
 
-                        <hr class="separator">
+        <section style="align-content: center;">
+            <div class="col-md-9 col-12">
+                <div class="container text-center">
+                    <div class="row" style="gap: 100px; justify-content: center;">
 
-                        <div class="mb-3">
-                            <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Raza</h2>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="golden-retriever" name="Raza" value="golden-retriever">
-                                <label class="form-check-label" for="golden-retriever">Golden Retriever</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Poodle" name="Raza" value="Poodle">
-                                <label class="form-check-label" for="Poodle">Poodle</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Beagle" name="Raza" value="Beagle">
-                                <label class="form-check-label" for="Beagle">Beagle</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Chihuahua" name="Raza" value="Chihuahua">
-                                <label class="form-check-label" for="Chihuahua">Chihuahua</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Siamés" name="Raza" value="Siamés">
-                                <label class="form-check-label" for="Siamés">Siamés</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Persa" name="Raza" value="Persa">
-                                <label class="form-check-label" for="Persa">Persa</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Ragdoll" name="Raza" value="Ragdoll">
-                                <label class="form-check-label" for="Ragdoll">Ragdoll</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Otro" name="Raza" value="Otro">
-                                <label class="form-check-label" for="Otro">Otro</label>
-                            </div>
-                        </div>
-                    </form>
-                </aside>
-
-                <div class="col-md-9 col-12" >
-                    <div class="container text-center">
-                        <div class="row" style="margin-left: 100px; gap: 100px;">
-
-                            <div class="col-3">
-                                <div class="pet-card">
-                                    <div>
-                                        <img style="width: 180px" src="img/listadoMascotas/Rocco.png">
-                                    </div>
-                                    <div class="pet-info rounded-pill">
-                                        Rocco<br>
-                                        <a href="perfilMascota.html">
-                                            <button class="btn btn-warning rounded-pill">Información</button>
-                                        </a>
-                                    </div>
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Rocco.png" alt="Rocco">
                                 </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="pet-card">
-                                    <div>
-                                        <img style="width: 230px" src="img/listadoMascotas/Juan.png">
-                                    </div>
-                                    <div class="pet-info rounded-pill">
-                                        Juan<br>
+                                <div class="pet-info rounded-pill">
+                                    Rocco<br>
+                                    <a href="perfilMascota.html">
                                         <button class="btn btn-warning rounded-pill">Información</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="pet-card">
-                                    <div>
-                                        <img style="width: 210px" src="img/listadoMascotas/Tom.png">
-                                    </div>
-                                    <div class="pet-info rounded-pill">
-                                        Tommy<br>
-                                        <button class="btn btn-warning rounded-pill">Información</button>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="container text-center mb-5" style="margin-top: 200px;">
-                            <div class="row" style="margin-left: 100px; gap: 100px;">
-
-                                <div class="col-3">
-                                    <div class="pet-card">
-                                        <div>
-                                            <img src="img/listadoMascotas/Charlie.png">
-                                        </div>
-                                        <div class="pet-info rounded-pill">
-                                            Charlie<br>
-                                            <button class="btn btn-warning rounded-pill">Información</button>
-                                        </div>
-                                    </div>
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Juan.png" alt="Juan">
                                 </div>
-
-                                <div class="col-3">
-                                    <div class="pet-card">
-                                        <div>
-                                            <img src="img/listadoMascotas/Bonita.png">
-                                        </div>
-                                        <div class="pet-info rounded-pill">
-                                            Bonita<br>
-                                            <button class="btn btn-warning rounded-pill">Información</button>
-                                        </div>
-                                    </div>
+                                <div class="pet-info rounded-pill">
+                                    Juan<br>
+                                    <button class="btn btn-warning rounded-pill">Información</button>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="col-3">
-                                    <div class="pet-card">
-                                        <div>
-                                            <img src="img/listadoMascotas/Leo.png">
-                                        </div>
-                                        <div class="pet-info rounded-pill">
-                                            Leo<br>
-                                            <button class="btn btn-warning rounded-pill">Información</button>
-                                        </div>
-                                    </div>
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Tom.png" alt="Tommy">
+                                </div>
+                                <div class="pet-info rounded-pill">
+                                    Tommy<br>
+                                    <button class="btn btn-warning rounded-pill">Información</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <br><br><br><br><br>
+
+            <div class="col-md-9 col-12">
+                <div class="container text-center">
+                    <div class="row" style="gap: 100px; justify-content: center;">
+
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Charlie.png" alt="Charlie">
+                                </div>
+                                <div class="pet-info rounded-pill">
+                                    Charlie<br>
+                                    <a href="perfilMascota.html">
+                                        <button class="btn btn-warning rounded-pill">Información</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Bonita.png" alt="Bonita">
+                                </div>
+                                <div class="pet-info rounded-pill">
+                                    Bonita<br>
+                                    <button class="btn btn-warning rounded-pill">Información</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="pet-card">
+                                <div class="pet-image">
+                                    <img src="img/listadoMascotas/Leo.png" alt="Leo">
+                                </div>
+                                <div class="pet-info rounded-pill">
+                                    Leo<br>
+                                    <button class="btn btn-warning rounded-pill">Información</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="footer bg-warning text-white py-4 mt-5">

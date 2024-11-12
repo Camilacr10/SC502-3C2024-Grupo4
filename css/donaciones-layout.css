@@ -10,11 +10,24 @@ header {
     background-image: url('../img/adopciones/banner.png');
     background-size: cover;
     background-position: center;
-    height: 320px;
+    height: 330px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.title-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: -2rem;
+    color: white;
+}
+
+.sub-text {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: white;
 }
 
 .btn-warning {
@@ -30,67 +43,53 @@ header {
     color: #C66618;
 }
 
-.banner-img-donaciones {
-    transform: scale(1.2);
-    margin-left: 400px;
-    transform: translateY(-22%);
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.title-text-donaciones {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-left: 100px;
-    color: white;
+.d-flex img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5%;
 }
 
-.sub-text-donaciones {
-    font-size: 1.5rem;
-    margin-left: 100px;
-    color: white;
-    transform: translateY(-110%);
-}
-
-.container-section-donaciones {
-    gap: 70px;
-    margin-top: 100px;
-    text-align: center;
+.d-flex .p-2 {
+    margin: 0;
+    flex: 1;
 }
 
 .card {
-    height: 700px;
-    width: 400px;
-    text-align: center;
+    height: 450px;
+    width: 300px;
     border-radius: 40px;
 }
 
 .circle-container {
-    height: 250px;
-    width: 250px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
     border-radius: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin-left: 60px;
-    margin-top: 70px;
+    overflow: hidden;
 }
 
-.circle-img {
-    height: 110px;
-    width: 160px;
-    margin-top: 70px;
+.circle-container img {
+    height: 80px;
+    width: 100px;
 }
-
-.card-title {
-    margin-top: 50px;
-    font-weight: bold;
-}
-
 
 .btn-donacion {
     background-color: #d2691e;
-    margin-top: 50px;
-    height: 70px;
-    width: 200px;
-    font-size: 1.7rem;
+    width: 50%;
+    font-size: 1.2rem;
     font-weight: bold;
     border: none;
     color: white;
@@ -98,10 +97,8 @@ header {
 
 .btn-voluntariado {
     background-color: #edb516;
-    margin-top: 50px;
-    height: 70px;
-    width: 200px;
-    font-size: 1.7rem;
+    width: 50%;
+    font-size: 1.2rem;
     font-weight: bold;
     border: none;
     color: white;
