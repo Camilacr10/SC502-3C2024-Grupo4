@@ -3,205 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/perfil_layout.css">
-    <style>
-        /* Asegura que el formulario ocupe toda la altura de la pantalla */
-        .login-card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;  /* Ocupa toda la altura de la pantalla */
-        }
-
-        /* Estilos para la imagen del logo */
-        .login-logo {
-            max-width: 700px;  /* Aumenta aún más el tamaño del logo */
-            height: auto;      /* Mantiene las proporciones */
-            display: block;
-            margin-left: 0;  /* Alinea el logo a la izquierda */
-        }
-
-        /* Título aún más grande */
-        .login-title {
-            font-size: 8rem;  /* Título extremadamente grande */
-            margin-top: 6rem; /* Mayor separación entre el logo y el título */
-            margin-bottom: 4rem; /* Separación del título con el formulario */
-        }
-
-        /* Agrega el texto debajo del logo */
-        .login-text {
-            font-size: 4rem; /* Aumenta el tamaño del texto */
-            margin-top: 2rem; /* Más espacio entre el logo y el texto */
-            color: #333; /* Color de texto */
-            font-weight: normal; /* Normal para que no esté en negrita */
-            text-align: left; /* Alinea el texto a la izquierda */
-            margin-bottom: 4rem; /* Separación del texto con el título */
-        }
-
-        /* Aumenta aún más el tamaño de los labels y los campos */
-        .login-card .form-group label {
-            font-size: 4rem;  /* Aumenta el tamaño de los labels */
-            font-weight: bold; /* Hace que los labels estén en negrita */
-            text-align: left; /* Alinea los labels a la izquierda */
-            width: 100%; /* Hace que el label ocupe todo el ancho disponible */
-            margin-bottom: 1.5rem; /* Espacio entre el label y el campo de texto */
-        }
-
-        .login-card .form-control {
-            font-size: 4rem;   /* Aumenta el tamaño de los campos de texto */
-            padding: 3rem;     /* Aumenta el padding dentro de los campos */
-            height: 120px;     /* Aumenta la altura de los campos */
-            border: none;      /* Elimina el borde predeterminado */
-            border-bottom: 2px solid black;  /* Agrega una línea negra en la parte inferior */
-            box-shadow: none;  /* Elimina cualquier sombra alrededor del campo */
-            margin-bottom: 3rem; /* Espacio debajo de cada campo de texto */
-        }
-
-        /* Estilo para el botón de login */
-        .login-card .btn {
-            font-size: 4rem;   /* Aumenta el tamaño del texto del botón */
-            width: 300px;      /* Aumenta el ancho del botón (lo hace más largo) */
-            height: 120px;     /* Mantiene la altura */
-            background-color: #FFB300;  /* Color mostaza */
-            border: none;      /* Quita el borde del botón */
-            font-weight: bold; /* Texto en negrita */
-            color: white;      /* Letra blanca */
-            text-align: center; /* Asegura que el texto esté centrado */
-            display: flex;     /* Usa flexbox para centrar el contenido */
-            justify-content: center;  /* Centra el texto horizontalmente */
-            align-items: center;     /* Centra el texto verticalmente */
-        }
-
-        /* Espaciado entre los campos */
-        .form-group {
-            margin-bottom: 5rem;
-        }
-
-        /* Asegura que la columna del formulario tenga la misma altura que la columna de la imagen */
-        .login-card .col-md-6 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;  /* Permite posicionar elementos de forma absoluta */
-        }
-
-        /* Estilos para la imagen de Pergat (hacerla mucho más grande) */
-        .img-fluid {
-            max-width: 100%;  /* Asegura que la imagen no se salga del contenedor */
-            height: auto;
-            width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
-            max-height: 100vh; /* Hace que ocupe toda la altura de la ventana */
-        }
-
-        /* Coloca el botón a la derecha del formulario */
-        .login-card form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .form-group {
-            width: 100%;
-            margin-bottom: 3rem; /* Más espacio entre el campo y el siguiente */
-        }
-
-        /* Alinea el botón a la derecha */
-        .btn-container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end; /* Alinea el botón a la derecha */
-        }
-
-        /* Estilo para el texto de "Forget Password" */
-        .forget-password {
-            font-size: 4rem;  /* Aumenta el tamaño del texto */
-            font-weight: bold; /* Texto en negrita */
-            text-align: right; /* Alinea a la derecha */
-            margin-bottom: 3rem;
-            color: #007BFF; /* Color azul para el enlace */
-            cursor: pointer; /* Hace que el cursor cambie a un puntero */
-        }
-
-        /* Cambio de color cuando se pasa el cursor sobre el enlace */
-        .forget-password:hover {
-            text-decoration: underline;
-        }
-
-        /* Estilo para el texto "Don´t have an Account? Sign Up" */
-        .signup-text {
-            font-size: 4rem; /* Aumenta el tamaño de la fuente */
-            font-weight: bold; /* En negrita */
-            text-align: center; /* Centrado */
-            color: black; /* Color original */
-            cursor: pointer; /* Cambia a puntero */
-            margin-top: 3rem; /* Agrega espacio arriba */
-        }
-
-        /* Enlace "Sign Up" en azul */
-        .signup-text a {
-            color: #007BFF; /* Azul para el enlace */
-            text-decoration: none; /* Quitar subrayado */
-        }
-
-        /* Cambio de color al pasar el cursor sobre el texto */
-        .signup-text a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
-    <div class="card login-card">
-        <div class="card-body d-flex">
-            <!-- Columna izquierda: Formulario de registro -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="text-center w-100">
-                    <!-- Logo y texto alineados a la izquierda -->
-                    <img src="img/usuario/logo.png" alt="Logo" class="login-logo">
-                    <p class="login-text">Salvando Unas Patitas</p>
-                    <h2 class="login-title">Register Member Area</h2>
-                    <form action="login.html" method="GET">
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu Contraseña" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm_password">Confirm Password:</label>
-                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirma tu Contraseña" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number:</label>
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" required>
-                        </div>
-                        <!-- Contenedor del botón, alineado a la derecha -->
-                        <div class="btn-container">
-                            <button type="submit" class="btn btn-block rounded-0">Register</button>
-                        </div>
-                    </form>
-                    <!-- Texto debajo del botón Register, con enlace a login -->
-                    <p class="signup-text">Already have an Account? <a href="login.html">Login</a></p>
+    <div class="login-container">
+        <div class="login-form">
+            <img src="img/adopciones/logo.png" alt="Logo" class="login-logo">
+            <h2 class="login-title">Registro de Usuario</h2>
+    
+            <form action="procesar_registro.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
                 </div>
-            </div>
-            <!-- Columna derecha: Imagen de fondo -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <img src="img/usuario/pergat.png" class="img-fluid" alt="Imagen de Pergat">
-            </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profilePhoto">Foto de perfil</label>
+                    <input type="file" id="profilePhoto" name="profilePhoto" class="form-control" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="aboutMe">Algo sobre mí</label>
+                    <textarea id="aboutMe" name="aboutMe" class="form-control" rows="3"></textarea>
+                </div>
+                
+                <div class="btn-container">
+                    <a href="index.html" class="btn btn-primary">Registrarse</a>
+                </div>
+                
+                
+                <p class="signup-text">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+            </form>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="footer bg-warning text-white py-4">
+        <div class="container text-center">
+            <p>&copy; Derechos Reservados</p>
+            <div class="social-icons d-flex justify-content-center mt-3">
+                <a href="#" class="mx-2"><img src="img/adopciones/logoFacebook.svg" alt="Facebook" class="icon"></a>
+                <a href="#" class="mx-2"><img src="img/adopciones/logoInsta.png" alt="Instagram" class="icon"></a>
+                <a href="#" class="mx-2"><img src="img/adopciones/logoTwitter.svg" alt="Twitter" class="icon"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
