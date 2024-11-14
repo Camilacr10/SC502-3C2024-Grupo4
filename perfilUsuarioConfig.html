@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="css/perfilUsuario_config.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="img/usuario/logo.png" alt="Logo" class="logo">
+      <h2>Salvando Unas Patitas</h2>
+    </div>
+    <ul>
+      <li><a href="Index.html"><img src="img/usuario/home.png" alt="Home icon" class="icon">Home</a></li>
+      <li><a href="donaciones.html"><img src="img/usuario/donar.png" alt="Donaciones icon" class="icon">Donaciones</a></li>
+      <li><a href="#"><img src="img/usuario/reporte.png" alt="Reportes icon" class="icon">Reportes</a></li>
+      <li><a href="inicioAdmin.html"><img src="img/usuario/admin.png" alt="Modo Administrador icon" class="icon">Modo Administrador</a></li>
+    </ul>    
+    <div class="support">
+      <a href="#">
+          <img class="icon" src="img/usuario/soporte.png" alt="Soporte"> 
+          Soporte
+      </a>
+      <a href="#">
+          <img class="icon" src="img/usuario/configuracion.png" alt="Configuraciones"> 
+          Configuraciones
+      </a>
+  </div>  
+  <hr class="divider">
+  <div class="user-info">
+    <div class="user-details">
+        <p class="user-name">Olivia Rodriguez</p>
+        <span class="user-email">olivia@gmail.com</span>
+    </div>
+    <a href="login.html">
+      <img src="img/usuario/salir.png" alt="icono" class="user-icon">
+  </a> 
+  </div>
+  </div>
+  <div class="main-content">
+
+    <div class="header">
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/usuario/gatos1.png.jpg" alt="Los Angeles" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="img/usuario/perritos.png" alt="Chicago" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="img/usuario/perritos2.png" alt="New York" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="profile-pic">
+        <img src="img/usuario/user.png" alt="User image">
+      </div>
+      <div class="settings">
+        <h1>Configuraciones</h1>
+        <span>olivia@gmail.com</span>
+      </div>
+      <div class="tabs">
+        <a href="perfilUsuarioSM.html">Sobre mi</a>
+        <a href="perfilUsuario.html">Perfil</a>
+        <a href="perfilUsuarioConfig.html" class="active">Contraseña</a>
+      </div>
+    </div>
+    <div class="password-form">
+      <h2>Contraseña</h2>
+      <p>Ingrese su contraseña actual para cambiar su contraseña.</p>
+      <form id="passwordForm">
+        <label for="currentPassword">Actual Contraseña</label>
+        <input type="password" id="currentPassword" required>
+        <label for="newPassword">Nueva Contraseña</label>
+        <input type="password" id="newPassword" required placeholder="La nueva contraseña debe tener más de 8 caracteres.">
+        <label for="confirmPassword">Confirmar Nueva Contraseña</label>
+        <input type="password" id="confirmPassword" required>
+        <div class="form-buttons">
+          <button type="button" onclick="cancelForm()">Cancelar</button>
+          <button type="submit">Actualizar Contraseña</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f7f9fc;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.sidebar ul li {
+  margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.support, .user-info {
+  margin-top: 20px;
+  color: #666;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px; 
+  left: 9%; 
+  transform: translateX(-50%); 
+  border: 4px solid white;
+}
+
+.settings h1 {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tabs a {
+  color: #666;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.tabs a.active {
+  border-bottom: 2px solid #333;
+}
+
+.password-form {
+  margin-top: 20px;
+}
+
+.password-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.password-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.carousel {
+  width: 100%; 
+  height: 240px; 
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar-header .logo {
+  width: 200px;
+  height: auto; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px; 
+}
+
+.sidebar-header h2 {
+  font-size: 1.0em; 
+  text-align: center; 
+  margin: 0; 
+}
+
+.sidebar ul li a, .support a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar ul li a .icon, .support a .icon {
+  width: 30px; 
+  height: 30px;
+  margin-right: 10px; 
+}
+
+.sidebar ul li a:hover, .support a:hover {
+  color: #da6314; 
+}
+
+.sidebar ul li a:hover .icon, .support a:hover .icon {
+  transform: scale(1.1);
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 0.9em; 
+  margin: 0; 
+}
+
+.user-email {
+  display: block; 
+  font-size: 0.8em; 
+  color: #888888;
+  margin-top: 2px;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f7f9fc;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.support {
+  margin-top: auto;
+}
+
+.support a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.support a .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.user-email {
+  font-size: 0.8em;
+  color: #888888;
+}
+
+.user-icon {
+  width: 16px; 
+  height: 16px;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 30px !important;  
+  height: 30px !important; 
+  object-fit: contain;     
+  cursor: pointer;         
+}
+
+.settings h1 {
+  color: #e7900c;
+  font-size: 2em;  
+  font-weight: bold; 
+}
+
+.tabs a.active {
+  color: #2e93a0; 
+  font-weight: bold; 
+}
+
+input[type="file"] {
+  background-color: #28a745;
+  color: white; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+}
+
+input[type="file"]:hover {
+  background-color: #fabc10; 
+}
+
+input[type="file"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}

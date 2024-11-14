@@ -1,4 +1,3 @@
-/* Asegura que el formulario ocupe toda la altura de la pantalla */
 .login-container {
     height: 100vh;
     display: flex;
@@ -6,54 +5,107 @@
     align-items: center;
 }
 
-/* Diseño del formulario de login */
 .login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    max-width: 400px; /* Limita el ancho del formulario */
+    max-width: 400px; 
     width: 100%;
 }
 
 .login-logo {
-    max-width: 250px; /* Ajusta el tamaño del logo */
+    max-width: 250px;
     margin-bottom: 15px;
 }
 
 .login-text {
-    font-size: 1.8rem; /* Reducido para mejorar visibilidad */
+    font-size: 1.8rem; 
     margin-bottom: 5px;
 }
 
 .login-title {
-    font-size: 2.2rem; /* Ajuste para mejorar visibilidad */
+    font-size: 2.2rem; 
     margin-bottom: 20px;
 }
 
-/* Estilos para los campos del formulario */
 .form-group {
     width: 100%;
     margin-bottom: 1.2rem;
 }
 
 .form-control {
-    font-size: 1.2rem; /* Fuente más pequeña para mejorar ajuste */
+    font-size: 1.2rem;
     padding: 0.8rem;
-    height: 45px; /* Altura ajustada para mejorar el diseño */
+    height: 45px; 
 }
 
-/* Estilos para el botón */
 .btn-container .btn {
-    font-size: 1.5rem; /* Tamaño de texto ajustado */
-    padding: 1rem 2rem; /* Ajuste en el padding para mayor consistencia */
+    font-size: 1.1rem; 
+    padding: 0.5rem 1.0rem;
     background-color: #FFB300;
-    border-radius: 10px;
+    border-radius: 5px; 
     color: white;
 }
 
-/* Estilo para el enlace de "Olvidé mi contraseña" */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px; 
+    width: 100%;
+}
+
+.login-logo {
+    max-width: 250px; 
+    margin-bottom: 15px;
+}
+
+.login-text {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.login-title {
+    font-size: 2.2rem; 
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.form-control {
+    font-size: 1.2rem; 
+    padding: 0.8rem;
+    height: 45px; 
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end; 
+    width: 100%;
+}
+
+.btn-container .btn {
+    font-size: 1.1rem; 
+    padding: 0.5rem 1.0rem; 
+    background-color: #FFB300;
+    border-radius: 5px;
+    color: white;
+}
+
 .forget-password {
     font-size: 1.2rem;
     text-align: right;
@@ -65,7 +117,6 @@
     text-decoration: underline;
 }
 
-/* Estilo para el enlace "Sign Up" */
 .signup-text {
     font-size: 1.2rem;
     text-align: center;
@@ -81,17 +132,16 @@
     text-decoration: underline;
 }
 
-/* Estilos para la imagen */
 .login-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
 }
 
 /* Diseño responsive para pantallas más pequeñas */
 @media (max-width: 768px) {
     .login-logo {
-        max-width: 200px; /* Ajuste para pantallas pequeñas */
+        max-width: 200px; 
     }
     
     .login-text {
@@ -117,7 +167,7 @@
 
 @media (max-width: 576px) {
     .login-container {
-        padding: 0 10px; /* Ajuste de padding para pantallas más pequeñas */
+        padding: 0 10px; 
     }
 
     .login-form {
