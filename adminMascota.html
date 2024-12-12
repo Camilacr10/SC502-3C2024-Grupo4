@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Gatitos</title>
+    <title>Gestión de Mascotas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -16,114 +16,181 @@
         <nav class="navbar navbar-expand-md" style="background-color: #c98a27;">
             <div class="container d-flex justify-content-between align-items-center">
                 <a href="Index.html" class="navbar-brand text-light">
-                    <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
                     <img src="img/adopciones/logo.png" alt="Logo" style="width: 100px;">
                 </a>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light"
                                 style="font-size: 1.1em;">Acerca de Nosotros</a></li>
-                        <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
-                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light" style="font-size: 1.1em;">Listado de
+                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light"
+                                style="font-size: 1.1em;">Listado de
                                 Mascotas</a></li>
-                        <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
                         <li class="nav-item"><a href="donaciones.html" class="nav-link text-light"
                                 style="font-size: 1.1em;">Donaciones</a></li>
-                        <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
                         <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light"
                                 style="font-size: 1.1em;">Adopciones</a></li>
-                        <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
                     </ul>
                     <a href="login.html">
                         <button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar Sesión</button>
-                    </a>   
-                    <!-- Tengo que cambiar la dirección acorde a las paginas de las demás-->
-                    <img src="img/adopciones/logoPerfil.png" alt="Perfil" class="rounded-circle ms-2" style="width: 50px;">
+                    </a>
+                    <img src="img/adopciones/logoPerfil.png" alt="Perfil" class="rounded-circle ms-2"
+                        style="width: 50px;">
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Sección de encabezado Gestión de Gatitos -->
+    <!-- Sección de encabezado Gestión de Mascotas -->
     <section class="position-relative text-center text-white"
         style="background-image: url('img/gestion/generalGestion.png'); background-size: cover; background-position: center; height: 500px;">
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(217, 142, 47, 0.5);">
         </div>
         <div class="container d-flex justify-content-center align-items-center h-100 position-relative">
             <div style="background-color: #b66a19a3; padding: 10px 30px; border-radius: 5px;">
-                <h1 class="m-0" style="font-size: 3em;">Gestión de Gatitos</h1>
+                <h1 class="m-0" style="font-size: 3em;">Gestión de Mascotas</h1>
             </div>
         </div>
     </section>
 
-    <!-- Sección de botón para agregar gato y contador -->
+    <!-- Sección de botón para agregar mascota y contador -->
     <section class="py-4 bg-light">
         <div class="container d-flex justify-content-between">
-            <button type="button" class="btn btn-block" data-bs-toggle="modal" data-bs-target="#agregarGato"
+            <button type="button" class="btn btn-block" data-bs-toggle="modal" data-bs-target="#agregarMascota"
                 style="background-color: #d98e2f; color: #ffffff;">
-                <i class="fas fa-plus"></i> Agregar Gatito
+                <i class="fas fa-plus"></i> Agregar Mascota
             </button>
             <div class="card text-center"
                 style="background-color: #d98e2f; color: #ffffff; padding: 10px; width: 200px;">
-                <h5>Total de Gatitos</h5>
-                <h3 class="m-0" id="totalGatos"><i class="fas fa-cat"></i> 0</h3>
+                <h5>Total de Mascotas</h5>
+                <h3 class="m-0" id="totalMascotas"><i class="fas fa-paw"></i> 0</h3>
             </div>
         </div>
     </section>
 
-    <!-- Modal para Agregar o Editar Gato -->
-    <div class="modal fade" id="agregarGato" tabindex="-1" aria-labelledby="agregarGatoLabel" aria-hidden="true">
+    <!-- Modal para Agregar o Editar Mascota -->
+    <div class="modal fade" id="agregarMascota" tabindex="-1" aria-labelledby="agregarMascotaLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="agregarGatoLabel">Agregar Gato</h5>
+                    <h5 class="modal-title" id="agregarMascotaLabel">Agregar Mascota</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="gatoForm">
-                        <input type="hidden" id="gatoId">
+                    <!-- Formulario para ingresar datos de las mascotas -->
+                    <form id="mascotaForm">
+                        <!-- Campo oculto para el ID de la mascota -->
+                        <input type="hidden" id="id_mascota">
+
+                        <!-- Nombre de la mascota -->
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" required>
                         </div>
+
+                        <!-- Edad de la mascota -->
                         <div class="mb-3">
                             <label for="edad" class="form-label">Edad</label>
                             <input type="number" class="form-control" id="edad" required>
                         </div>
+
+                        <!-- Especie (Perro o Gato) -->
+                        <div class="mb-3">
+                            <label for="especie" class="form-label">Especie</label>
+                            <select class="form-control" id="especie" required>
+                                <option value="Gato">Gato</option>
+                                <option value="Perro">Perro</option>
+                            </select>
+                        </div>
+
+                        <!-- Raza de la mascota -->
+                        <div class="mb-3">
+                            <label for="raza" class="form-label">Raza</label>
+                            <input type="text" class="form-control" id="raza">
+                        </div>
+
+                        <!-- Peso de la mascota -->
+                        <div class="mb-3">
+                            <label for="peso" class="form-label">Peso (kg)</label>
+                            <input type="number" step="0.01" class="form-control" id="peso">
+                        </div>
+
+                        <!-- Sexo de la mascota -->
                         <div class="mb-3">
                             <label for="sexo" class="form-label">Sexo</label>
                             <select class="form-control" id="sexo" required>
-                                <option value="M">Macho</option>
-                                <option value="H">Hembra</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
                             </select>
                         </div>
+
+                        <!-- Castrado -->
                         <div class="mb-3">
                             <label for="castrado" class="form-label">Castrado</label>
-                            <select class="form-control" id="castrado" required>
-                                <option value="Sí">Sí</option>
-                                <option value="No">No</option>
+                            <select class="form-control" id="castrado">
+                                <option value="1">Sí</option>
+                                <option value="0">No</option>
                             </select>
                         </div>
+
+                        <!-- Vacunado -->
+                        <div class="mb-3">
+                            <label for="vacunado" class="form-label">Vacunado</label>
+                            <select class="form-control" id="vacunado">
+                                <option value="1">Sí</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <!-- Desparasitado -->
+                        <div class="mb-3">
+                            <label for="desparasitado" class="form-label">Desparasitado</label>
+                            <select class="form-control" id="desparasitado">
+                                <option value="1">Sí</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <!-- Descripción -->
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                        </div>
+
+                        <!-- Fecha de rescate -->
+                        <div class="mb-3">
+                            <label for="fecha_rescate" class="form-label">Fecha de Rescate</label>
+                            <input type="date" class="form-control" id="fecha_rescate">
+                        </div>
+
+                        <!-- Ruta de imagen -->
+                        <div class="mb-3">
+                            <label for="ruta_imagen" class="form-label">Imagen</label>
+                            <input type="text" class="form-control" id="ruta_imagen" placeholder="URL de la imagen">
+                        </div>
+
+                        <!-- Disponibilidad -->
                         <div class="mb-3">
                             <label for="disponibilidad" class="form-label">Disponibilidad</label>
-                            <select class="form-control" id="disponibilidad" required>
-                                <option value="Disponible">Disponible</option>
-                                <option value="No Disponible">No Disponible</option>
+                            <select class="form-control" id="disponibilidad">
+                                <option value="1">Disponible</option>
+                                <option value="0">No Disponible</option>
                             </select>
                         </div>
+
                         <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Listado de gatos -->
-    <section id="gato" class="py-4">
+    <!-- Listado de mascotas -->
+    <section id="mascota" class="py-4">
         <div class="container">
             <div class="card">
                 <div class="card-header text-center text-white" style="background-color: #d98e2f;">
-                    <h4>Listado de Gatitos</h4>
+                    <h4>Listado de Mascotas</h4>
                 </div>
                 <div class="card-body p-0" style="width: auto;">
                     <table class="table table-striped table-hover mb-0">
@@ -131,14 +198,19 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Edad</th>
+                                <th>Especie</th>
+                                <th>Raza</th>
+                                <th>Peso</th>
                                 <th>Sexo</th>
                                 <th>Castrado</th>
+                                <th>Vacunado</th>
+                                <th>Desparasitado</th>
                                 <th>Disponibilidad</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="gatoList">
-                            <!-- Aquí se muestran los gatitos-->
+                        <tbody id="mascotaList">
+                            <!-- Aquí se muestran las mascotas-->
                         </tbody>
                     </table>
                 </div>
@@ -146,13 +218,13 @@
         </div>
     </section>
 
-    <!-- Footer: pie de página con enlaces a redes sociales -->
+    <!-- Footer -->
     <footer class="bg-warning text-black py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <p class="mb-0">&copy; Derechos Reservados</p>
             <div>
-                <a href="https://facebook.com/salvandounaspatitas" class="mx-2"><img src="img/adopciones/logoFacebook.svg"
-                        alt="Facebook" style="width: 60px;"></a>
+                <a href="https://facebook.com/salvandounaspatitas" class="mx-2"><img
+                        src="img/adopciones/logoFacebook.svg" alt="Facebook" style="width: 60px;"></a>
                 <a href="https://instagram.com/salvandounaspatitas" class="mx-2"><img src="img/adopciones/logoInsta.png"
                         alt="Instagram" style="width: 40px;"></a>
                 <a href="https://twitter.com/salvandounaspatitas" class="mx-2"><img src="img/adopciones/logoTwitter.svg"
@@ -163,7 +235,7 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/adminGatos.js"></script>
+    <script src="js/adminMascota.js"></script>
 </body>
 
 </html>

@@ -1,100 +1,170 @@
 document.addEventListener('DOMContentLoaded', function () {
     let isEditMode = false;
     let edittingId;
+    let usuarios = [];
+    const API_URL = 'backend/adminUsuarios.php';
 
-    const usuarios = [
-        { id: 1, nombre: "Diana", apellidos: "Ramírez", correo: "diana@gmail.com", activo: "Sí" },
-        { id: 2, nombre: "Camila", apellidos: "Corrales", correo: "camila@gmail.com", activo: "Sí" },
-        { id: 3, nombre: "Madeline", apellidos: "Araya", correo: "madeline@gmail.com", activo: "Sí" }
-    ];
-
-    // Función para actualizar el conteo total de usuarios
-    function updateTotalUsuarios() {
-        document.getElementById('totalUsuarios').innerHTML = `<i class="fas fa-user"></i> ${usuarios.length}`;
+    // Función para cargar los usuarios
+    async function loadUsuarios() {
+        try {
+            const response = await fetch(API_URL, {
+                method: 'GET',
+                credentials: 'include',
+            });
+            if (response.ok) {
+                usuarios = await response.json();
+                renderUsuarios(usuarios);
+            } else {
+                console.error("Error al cargar los usuarios");
+            }
+        } catch (err) {
+            console.error(err);
+        }
     }
 
-    // Función para cargar y mostrar la lista de usuarios
-    function loadUsuarios() {
+    // Función para renderizar los usuarios en la interfaz
+    function renderUsuarios(usuarios) {
         const usuarioList = document.getElementById('usuarioList');
         usuarioList.innerHTML = '';
 
-        usuarios.forEach(usuario => {
+        // Actualiza el contador
+        document.getElementById('totalUsuarios').innerHTML = `<i class="fas fa-user"></i> ${usuarios.length}`;
+
+        usuarios.forEach(function (usuario) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${usuario.id}</td>
+                <td>${usuario.id_rol}</td>
+                <td>${usuario.username}</td>
                 <td>${usuario.nombre}</td>
-                <td>${usuario.apellidos}</td>
+                <td>${usuario.apellido}</td>
                 <td>${usuario.correo}</td>
-                <td>${usuario.activo}</td>
+                <td>${usuario.telefono}</td>
+                <td>${usuario.activo ? "1" : "0"}</td>
                 <td>
-                    <button class="btn btn-danger btn-sm delete-usuario" data-id="${usuario.id}">Eliminar</button>
-                    <button class="btn btn-success btn-sm edit-usuario" data-id="${usuario.id}">Modificar</button>
+                    <button class="btn btn-success btn-sm edit-usuario" data-id="${usuario.id_usuario}">Editar</button>
+                    <button class="btn btn-danger btn-sm delete-usuario" data-id="${usuario.id_usuario}">Eliminar</button>
                 </td>
             `;
             usuarioList.appendChild(row);
         });
 
-        // Añadir eventos de clic para editar y eliminar
-        document.querySelectorAll('.edit-usuario').forEach(button => button.addEventListener('click', handleEditUsuario));
-        document.querySelectorAll('.delete-usuario').forEach(button => button.addEventListener('click', handleDeleteUsuario));
-
-        // Actualizar el total de usuarios
-        updateTotalUsuarios();
+        document.querySelectorAll('.edit-usuario').forEach(button =>
+            button.addEventListener('click', handleEditUsuario)
+        );
+        document.querySelectorAll('.delete-usuario').forEach(button =>
+            button.addEventListener('click', handleDeleteUsuario)
+        );
     }
 
+    // Función para manejar la edición de un usuario
     function handleEditUsuario(event) {
-        const usuarioId = parseInt(event.target.dataset.id);
-        const usuario = usuarios.find(u => u.id === usuarioId);
+        try {
+            const usuarioId = parseInt(event.target.dataset.id);
+            const usuario = usuarios.find(u => u.id_usuario === usuarioId);
 
-        document.getElementById('nombre').value = usuario.nombre;
-        document.getElementById('apellidos').value = usuario.apellidos;
-        document.getElementById('correo').value = usuario.correo;
-        document.getElementById('activo').value = usuario.activo;
+            document.getElementById('id_rol').value = usuario.id_rol;
+            document.getElementById('username').value = usuario.username;
+            document.getElementById('password').value = usuario.password;
+            document.getElementById('nombre').value = usuario.nombre;
+            document.getElementById('apellido').value = usuario.apellido;
+            document.getElementById('correo').value = usuario.correo;
+            document.getElementById('telefono').value = usuario.telefono;
+            document.getElementById('ruta_imagen').value = usuario.ruta_imagen;
+            document.getElementById('activo').value = usuario.activo ? "1" : "0";
 
-        isEditMode = true;
-        edittingId = usuarioId;
+            isEditMode = true;
+            edittingId = usuarioId;
 
-        const modal = new bootstrap.Modal(document.getElementById('agregarUsuario'));
-        modal.show();
+            const modal = new bootstrap.Modal(document.getElementById('agregarUsuario'));
+            modal.show();
+
+        } catch (error) {
+            alert("Error al intentar editar el usuario");
+            console.error(error);
+        }
     }
 
-    function handleDeleteUsuario(event) {
+    // Función para manejar la eliminación de un usuario
+    async function handleDeleteUsuario(event) {
         const usuarioId = parseInt(event.target.dataset.id);
-        const index = usuarios.findIndex(u => u.id === usuarioId);
-        usuarios.splice(index, 1);
-        loadUsuarios();
+
+        const response = await fetch(`${API_URL}?id_usuario=${usuarioId}`, {
+            method: 'DELETE',
+            credentials: 'include'
+        });
+
+        if (response.ok) {
+            loadUsuarios();
+        } else {
+            console.error("Error al eliminar el usuario");
+        }
     }
 
-    document.getElementById('usuarioForm').addEventListener('submit', function (e) {
+    // Manejar el envío del formulario
+    document.getElementById('agregarUsuario').addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const nombre = document.getElementById('nombre').value;
-        const apellidos = document.getElementById('apellidos').value;
-        const correo = document.getElementById('correo').value;
-        const activo = document.getElementById('activo').value;
+        const id_rol = parseInt(document.getElementById("id_rol").value);
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const correo = document.getElementById("correo").value;
+        const telefono = document.getElementById("telefono").value;
+        const ruta_imagen = document.getElementById("ruta_imagen").value;
+        const activo = parseInt(document.getElementById("activo").value);
+
+        let response; // Variable para almacenar la respuesta temporal
 
         if (isEditMode) {
-            const usuario = usuarios.find(u => u.id === edittingId);
-            usuario.nombre = nombre;
-            usuario.apellidos = apellidos;
-            usuario.correo = correo;
-            usuario.activo = activo;
+            response = await fetch(`${API_URL}?id_usuario=${edittingId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id_rol: id_rol,
+                    username: username,
+                    password: password,
+                    nombre: nombre,
+                    apellido: apellido,
+                    correo: correo,
+                    telefono: telefono,
+                    ruta_imagen: ruta_imagen,
+                    activo: activo,
+                }),
+                credentials: 'include'
+            });
         } else {
             const newUsuario = {
-                id: usuarios.length + 1,
+                id_rol: id_rol,
+                username: username,
+                password: password,
                 nombre: nombre,
-                apellidos: apellidos,
+                apellido: apellido,
                 correo: correo,
+                telefono: telefono,
+                ruta_imagen: ruta_imagen,
                 activo: activo
             };
-            usuarios.push(newUsuario);
+
+            response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newUsuario),
+                credentials: "include"
+            });
         }
 
-        const modal = bootstrap.Modal.getInstance(document.getElementById('agregarUsuario'));
-        modal.hide();
-        isEditMode = false;
-        edittingId = null;
-        loadUsuarios();
+        if (response.ok) {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('agregarUsuario'));
+            modal.hide(); // Cerrar el modal
+            loadUsuarios(); // Refrescar el listado
+        } else {
+            console.error("Sucedió un error");
+        }
     });
 
     document.getElementById('agregarUsuario').addEventListener('show.bs.modal', function () {
@@ -103,5 +173,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    document.getElementById("agregarUsuario").addEventListener('hidden.bs.modal', function () {
+        edittingId = null;
+        isEditMode = false;
+    });
+
+    // Cargar usuarios al inicio
     loadUsuarios();
 });
