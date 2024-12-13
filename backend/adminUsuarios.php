@@ -6,6 +6,7 @@ require 'db.php'; // Archivo que conecta con la base de datos
 function crearUsuario($id_rol, $username, $password, $nombre, $apellido, $correo, $telefono, $ruta_imagen, $activo)
 {
     global $pdo;
+    $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
 
     try {
         $sql = "INSERT INTO Usuario (id_rol, username, password, nombre, apellido, correo, telefono, ruta_imagen, activo) 
@@ -14,7 +15,7 @@ function crearUsuario($id_rol, $username, $password, $nombre, $apellido, $correo
         $stmt->execute([
             'id_rol' => $id_rol,
             'username' => $username,
-            'password' => $password,
+            'password' => $passwordHashed,
             'nombre' => $nombre,
             'apellido' => $apellido,
             'correo' => $correo,
@@ -33,6 +34,7 @@ function crearUsuario($id_rol, $username, $password, $nombre, $apellido, $correo
 function editarUsuario($id_usuario, $id_rol, $username, $password, $nombre, $apellido, $correo, $telefono, $ruta_imagen, $activo)
 {
     global $pdo;
+    $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
 
     try {
         $sql = "UPDATE Usuario 
@@ -44,7 +46,7 @@ function editarUsuario($id_usuario, $id_rol, $username, $password, $nombre, $ape
         $stmt->execute([
             'id_rol' => $id_rol,
             'username' => $username,
-            'password' => $password,
+            'password' => $passwordHashed,
             'nombre' => $nombre,
             'apellido' => $apellido,
             'correo' => $correo,
