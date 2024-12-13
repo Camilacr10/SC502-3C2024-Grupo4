@@ -4,7 +4,7 @@ require "message_log.php";
 $host = getenv('DB_HOST') !== false ? getenv('DB_HOST') : 'localhost';
 $dbname = getenv('DB_NAME') !== false ? getenv('DB_NAME') : 'salvando_unas_patitas';
 $user = getenv('DB_USER') !== false ? getenv('DB_USER') : 'root';
-$password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : 'fidelitas.15';
+$password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : 'root';
 
 try {
 

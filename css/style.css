@@ -184,6 +184,15 @@ header {
     transition: background-color 0.3s ease;
 }
 
+ a {
+    color: white;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
 .btn-custom:hover {
     background-color: #d97719;
 }

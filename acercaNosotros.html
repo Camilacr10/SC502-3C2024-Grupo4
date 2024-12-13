@@ -42,8 +42,8 @@
                 <div class="row">
                     <div class="banner3">
                         <h1 class="text1">Acerca de Nosotros</h1>
-                        <button class="btn btn-dark mt-4">Contáctanos</button> <button class="btn btn-dark mt-4"
-                            style="background-color: rgba(0, 0, 0, 0.507);">Información</button>
+                        <button class="btn btn-dark mt-4"><a href="#contacto">Contáctanos</a></button> <button class="btn btn-dark mt-4"
+                            style="background-color: rgba(0, 0, 0, 0.507);"><a href="Index.html#servicios">Información</a></button>
                     </div>
                 </div>
             </div>
@@ -91,10 +91,11 @@
                 </div>
             </div>
 
-            <div class="page">
+            <div id="contacto" class="page">
                 <div class="contact-container ">
                     <div class="contact-form">
                         <h2 class="contact-title">Contáctanos</h2>
+                        <form id="contactForm">
                         <p>Ingresa tus datos y te vamos a contactar lo más antes posible</p>
                         <label for="nombre" class="contact-form-label">Nombre</label>
                         <input type="text" id="nombre" class="contact-input" placeholder="Nombre">
@@ -102,7 +103,7 @@
                         <input type="email" id="correo" class="contact-input" placeholder="Correo">
                         <label for="mensaje" class="contact-form-label">Mensaje</label>
                         <textarea id="mensaje" class="contact-textarea" rows="4" placeholder="Mensaje"></textarea>
-                        <button type="submit" class="contact-button">Enviar</button>
+                        <button type="submit" class="contact-button">Enviar</button></form>
                     </div>
                     <div class="contact-info">
                         <h3 class="info-title">Info</h3>
@@ -132,5 +133,24 @@
         </div>
     </footer>
 </body>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        const mensaje = document.createElement("div");
+        mensaje.className = "alert alert-success text-center mt-3";
+        mensaje.textContent = "¡Tu mensaje ha sido enviado exitosamente! Gracias por contactarnos.";
+
+        const formContainer = document.querySelector(".contact-form");
+        formContainer.appendChild(mensaje);
+
+        this.reset();
+
+        setTimeout(() => {
+            mensaje.remove();
+        }, 5000);
+    });
+</script>
 
 </html>
