@@ -95,23 +95,6 @@ header {
     color: white;
 }
 
-.btn-voluntariado {
-    background-color: #edb516;
-    width: 50%;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    color: white;
-}
-
-.card-donaciones {
-    background-color: #edb516;
-}
-
-.card-voluntariado {
-    background-color: #d2691e;
-}
-
 .footer {
     background-color: #f5a623;
     color: white;

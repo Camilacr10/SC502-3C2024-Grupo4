@@ -52,19 +52,18 @@
             <div class="col-12 col-md-6 d-flex justify-content-center">
                 <div class="rounded-circle"
                     style="background-color: #d2691e; width: 70vw; height: 70vw; max-width: 500px; max-height: 500px;">
-                    <div class="rounded-circle"
+                    <div class="rounded-circle" id="imagen-cotenedor"
                         style="background-color: #f6cf5e; width: 80%; height: 80%; margin-left: 10%; margin-top: 10%; text-align: center;">
-                        <img src="img/listadoMascotas/Rocco.png" class="img-fluid"
-                            style="max-width: 260px; max-height: 430px; text-align: center;">
+                        
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-6 text-center">
                 <div class="text-center">
-                    <h1 class="title-text-mascota">Rocco</h1>
-                    <h5><b>Especie: </b>Gato</h5>
-                    <h5><b>Raza: </b>Otro</h5>
+                    <h1 class="title-text-mascota" id="nombre-mascota"></h1>
+                    <h5><b>Especie: </b><span id="especie-mascota"></span></h5>
+                    <h5><b>Raza: </b><span id="raza-mascota"></span></h5>
                 </div>
 
                 <div class="d-flex justify-content-center justify-content-center mt-3 gap-4">
@@ -73,26 +72,26 @@
                             <div class="icon-circle">
                                 <img src="img/perfilMascota/peso.png" class="icon-img">
                             </div>
-                            <p class="info-text">4.5 kg</p>
+                            <p class="info-text" id="peso-mascota"></p>
                         </div>
 
                         <div class="info-item">
                             <div class="icon-circle">
                                 <img src="img/perfilMascota/edad.png" class="icon-img">
                             </div>
-                            <p class="info-text">8 meses</p>
+                            <p class="info-text" id="edad-mascota"></p>
                         </div>
 
                         <div class="info-item">
                             <div class="icon-circle">
                                 <img src="img/perfilMascota/sexo.png" class="icon-img">
                             </div>
-                            <p class="info-text">Macho</p>
+                            <p class="info-text" id="sexo-mascota"></p>
                         </div>
                     </div>
                 </div>
 
-                <button class="btn btn-warning rounded-pill mt-4" style="font-size: 1.5rem;"><b>Adoptar</b></button>
+                <button class="btn btn-warning rounded-pill mt-4" id="adoptar-btn"style="font-size: 1.5rem;"><b>Adoptar</b></button>
             </div>
         </div>
     </div>
@@ -107,13 +106,7 @@
                         <h2 class="text-center text-md-start" style="font-weight: bold; font-size: 1.5rem;">Sobre mí
                         </h2>
                         <hr class="divider">
-                        <p style="font-size: 1.2rem; line-height: 1.6;">
-                            ¡Hola! Soy Rocco, un adorable gatito con un corazón lleno de amor y ganas de jugar. Tengo un
-                            pelaje suave y unos ojos grandes que brillan con curiosidad. Me encanta perseguir pelotas de
-                            hilo y acurrucarme en los regazos de quienes me rodean. Busco un hogar donde pueda recibir
-                            caricias y compartir momentos divertidos. Soy un compañero leal, siempre listo para hacerte
-                            sonreír con mis travesuras. Si estás buscando un amigo peludo que llene tu vida de alegría,
-                            ¡aquí estoy!
+                        <p style="font-size: 1.2rem; line-height: 1.6;" id="descripcion-mascota">
                         </p>
                     </div>
                 </div>
@@ -124,19 +117,7 @@
                         style="background-color: #f6cf5e; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                         <h2 class="text-center title">Datos Médicos</h2>
                         <hr class="divider">
-                        <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <div class="box">
-                                <img src="img/perfilMascota/vacunacion.jpg" class="box-img">
-                                <h6 class="text-center mt-1 box-title">Vacunado</h6>
-                            </div>
-                            <div class="box">
-                                <img src="img/perfilMascota/desparasitacion.png" class="box-img">
-                                <h6 class="text-center mt-1 box-title">Desparasitado</h6>
-                            </div>
-                            <div class="box">
-                                <img src="img/perfilMascota/castracion.png" class="box-img">
-                                <h6 class="text-center mt-1 box-title">Castrado</h6>
-                            </div>
+                        <div class="d-flex flex-wrap justify-content-center gap-3" id="contenedor-datos-medicos">
                         </div>
                     </div>
 
@@ -144,10 +125,7 @@
                         style="background-color: #f6cf5e; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                         <h2 class="text-center title">Requisitos</h2>
                         <hr class="divider">
-                        <ul class="requirements-list">
-                            <li class="requirement-item">Casa espaciosa y anti escape.</li>
-                            <li class="requirement-item">Si tiene otras mascotas, presentación previa es necesaria.</li>
-                            <li class="requirement-item">Compromiso financiero.</li>
+                        <ul class="requirements-list" id="requisitos-mascota">
                         </ul>
                     </div>
                 </div>
@@ -167,6 +145,7 @@
     </footer>
     </div>
     </div>
+    <script src="js/perfilMascota.js"></script>
 </body>
 
 </html>

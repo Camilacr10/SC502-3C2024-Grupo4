@@ -179,3 +179,9 @@ header {
 .social-icons a:hover .icon {
     transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el mouse */
 }
+
+.estilo-imagen {
+    max-width: 260px;
+    max-height: 430px;
+    text-align: center;
+}
