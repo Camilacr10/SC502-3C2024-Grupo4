@@ -15,10 +15,11 @@
     <div style="height: 2300px;">
         <div class="welcome-section3" ">
     <!-- Encabezado -->
-    <header >
+    <header>
         <div class=" container d-flex justify-content-between align-items-center py-2">
-            <a href="Index.html" class="nav-link text-light"><img src="img/adopciones/logo.png" alt="Logo"
-                    style="width: 100px;"></a>
+            <a href="Index.html" class="nav-link text-light">
+                <img src="img/adopciones/logo.png" alt="Logo" style="width: 100px;">
+            </a>
             <nav class="d-none d-md-flex" style="padding-left: 10px;">
                 <ul class="nav">
                     <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de
@@ -27,12 +28,11 @@
                             Mascotas</a></li>
                     <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a></li>
                     <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a></li>
-                </ul><a href="login.html">
-                    <button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar Sesión</button>
-                </a>                
+                </ul>
+                <div id="auth-container" class="d-flex align-items-center">
+                    <!-- Aquí se inyectará el contenido según el estado del usuario -->
+                </div>
             </nav>
-
-
         </div>
         </header>
 
@@ -42,8 +42,9 @@
                 <div class="row">
                     <div class="banner3">
                         <h1 class="text1">Acerca de Nosotros</h1>
-                        <button class="btn btn-dark mt-4"><a href="#contacto">Contáctanos</a></button> <button class="btn btn-dark mt-4"
-                            style="background-color: rgba(0, 0, 0, 0.507);"><a href="Index.html#servicios">Información</a></button>
+                        <button class="btn btn-dark mt-4"><a href="#contacto">Contáctanos</a></button> <button
+                            class="btn btn-dark mt-4" style="background-color: rgba(0, 0, 0, 0.507);"><a
+                                href="Index.html#servicios">Información</a></button>
                     </div>
                 </div>
             </div>
@@ -55,7 +56,8 @@
         <div class="container mt-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 d-flex justify-content-center">
-                    <img src="img/adopciones/gato4.png" alt="Gato" style="height: 300px; width: 3000px; padding-left: 50px;">
+                    <img src="img/adopciones/gato4.png" alt="Gato"
+                        style="height: 300px; width: 3000px; padding-left: 50px;">
                 </div>
                 <!-- Tarjeta de Misión -->
                 <div class="col-md-6">
@@ -92,19 +94,13 @@
             </div>
 
             <div id="contacto" class="page">
+                <div class="container my-5 text-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.476484349216!2d-84.0907237!3d9.861346099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e2ae45ad12cf%3A0x7c7023c32dac7a38!2sAntes%20de%20Pal%C3%AD%20de%20Cinco%20Esquinas%20(por%20el%20puente)!5e0!3m2!1ses-419!2scr!4v1730774185654!5m2!1ses-419!2scr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
                 <div class="contact-container ">
-                    <div class="contact-form">
-                        <h2 class="contact-title">Contáctanos</h2>
-                        <form id="contactForm">
-                        <p>Ingresa tus datos y te vamos a contactar lo más antes posible</p>
-                        <label for="nombre" class="contact-form-label">Nombre</label>
-                        <input type="text" id="nombre" class="contact-input" placeholder="Nombre">
-                        <label for="correo" class="contact-form-label">Correo</label>
-                        <input type="email" id="correo" class="contact-input" placeholder="Correo">
-                        <label for="mensaje" class="contact-form-label">Mensaje</label>
-                        <textarea id="mensaje" class="contact-textarea" rows="4" placeholder="Mensaje"></textarea>
-                        <button type="submit" class="contact-button">Enviar</button></form>
-                    </div>
+                    <h2 class="contact-title">Contáctanos</h2>
                     <div class="contact-info">
                         <h3 class="info-title">Info</h3>
                         <p class="info-item">✉ salvandounaspatitas@gmail.com</p>
@@ -117,10 +113,7 @@
     </div>
     </div>
     </div>
-    <div class="container my-5 text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.476484349216!2d-84.0907237!3d9.861346099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e2ae45ad12cf%3A0x7c7023c32dac7a38!2sAntes%20de%20Pal%C3%AD%20de%20Cinco%20Esquinas%20(por%20el%20puente)!5e0!3m2!1ses-419!2scr!4v1730774185654!5m2!1ses-419!2scr"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+    
 
     <footer class="footer bg-warning text-white py-4">
         <div class="container text-center">
@@ -135,8 +128,8 @@
 </body>
 
 <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); 
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
 
         const mensaje = document.createElement("div");
         mensaje.className = "alert alert-success text-center mt-3";
@@ -152,5 +145,6 @@
         }, 5000);
     });
 </script>
+<script src="js/usuario.js"></script>
 
 </html>

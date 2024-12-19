@@ -318,7 +318,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     margin: 0;
     background-color: #f2f2f2;
 }

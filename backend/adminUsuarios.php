@@ -34,7 +34,19 @@ function crearUsuario($id_rol, $username, $password, $nombre, $apellido, $correo
 function editarUsuario($id_usuario, $id_rol, $username, $password, $nombre, $apellido, $correo, $telefono, $ruta_imagen, $activo)
 {
     global $pdo;
-    $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
+
+    $stmt = $pdo->prepare("SELECT password FROM Usuario WHERE id_usuario = :id_usuario");
+    $stmt->execute(['id_usuario' => $id_usuario]);
+    $user = $stmt->fetch();
+    $passwordActual = $user['password'];
+
+    if ($password !== $passwordActual) {
+        // Si la contraseña es diferente, la hasheamos
+        $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
+    } else {
+        // Si la contraseña no ha cambiado, usamos la contraseña actual
+        $passwordHashed = $passwordActual;
+    }
 
     try {
         $sql = "UPDATE Usuario 

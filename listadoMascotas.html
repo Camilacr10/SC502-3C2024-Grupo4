@@ -16,26 +16,23 @@
     <div class="welcome-section-listado-mascotas">
         <header>
             <div class="container d-flex justify-content-between align-items-center py-2">
-                <a href="Index.html" class="nav-link text-light"><img src="img/adopciones/logo.png" alt="Logo"
-                        style="width: 100px;"></a>
+                <a href="Index.html" class="nav-link text-light">
+                    <img src="img/adopciones/logo.png" alt="Logo" style="width: 100px;">
+                </a>
                 <nav class="d-none d-md-flex" style="padding-left: 10px;">
                     <ul class="nav">
-                        <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de
-                                Nosotros</a></li>
-                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de
-                                Mascotas</a></li>
-                        <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a>
-                        </li>
-                        <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a>
-                        </li>
-                    </ul><a href="login.html">
-                        <button class="btn btn-warning rounded-pill" style="margin-left: 30px;">Iniciar Sesión</button>
-                    </a>   
+                        <li class="nav-item"><a href="acercaNosotros.html" class="nav-link text-light">Acerca de Nosotros</a></li>
+                        <li class="nav-item"><a href="listadoMascotas.html" class="nav-link text-light">Listado de Mascotas</a></li>
+                        <li class="nav-item"><a href="donaciones.html" class="nav-link text-light">Donaciones</a></li>
+                        <li class="nav-item"><a href="perfilAdopciones.html" class="nav-link text-light">Adopciones</a></li>
+                    </ul>
+                    <div id="auth-container" class="d-flex align-items-center">
+                        <!-- Aquí se inyectará el contenido según el estado del usuario -->
+                    </div>
                 </nav>
-
             </div>
         </header>
-
+        
         <section>
             <br><br><br>
             <div class="d-flex justify-content-between">
@@ -99,5 +96,5 @@
     </footer>
     <script src="js/listadoMascotas.js"></script>
 </body>
-
+<script src="js/usuario.js"></script>
 </html>

@@ -14,7 +14,13 @@
             <img src="img/adopciones/logo.png" alt="Logo" class="login-logo">
             <h2 class="login-title">Registro de Usuario</h2>
     
-            <form action="procesar_registro.php" method="post" enctype="multipart/form-data">
+            <form id="registrationForm">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" class="form-control" required>
@@ -24,36 +30,30 @@
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="profilePhoto">Foto de perfil</label>
-                    <input type="file" id="profilePhoto" name="profilePhoto" class="form-control" accept="image/*">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="aboutMe">Algo sobre mí</label>
-                    <textarea id="aboutMe" name="aboutMe" class="form-control" rows="3"></textarea>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" id="telefono" name="telefono" class="form-control" required>
                 </div>
                 
                 <div class="btn-container">
-                    <a href="index.html" class="btn btn-primary">Registrarse</a>
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
                 </div>
-                
                 
                 <p class="signup-text">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
             </form>
         </div>
     </div>
-
-    <footer class="footer bg-warning text-white py-4">
-        <div class="container text-center">
-            <p>&copy; Derechos Reservados</p>
-            <div class="social-icons d-flex justify-content-center mt-3">
-                <a href="#" class="mx-2"><img src="img/adopciones/logoFacebook.svg" alt="Facebook" class="icon"></a>
-                <a href="#" class="mx-2"><img src="img/adopciones/logoInsta.png" alt="Instagram" class="icon"></a>
-                <a href="#" class="mx-2"><img src="img/adopciones/logoTwitter.svg" alt="Twitter" class="icon"></a>
-            </div>
-        </div>
-    </footer>
 </body>
+<script src="js/registro.js"></script>
 </html>

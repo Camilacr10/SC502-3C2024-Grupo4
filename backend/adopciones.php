@@ -45,6 +45,7 @@ function getJsonInput()
     return json_decode(file_get_contents("php://input"), true);
 }
 
+session_start();
 switch ($method) {
     case 'GET':
         $mascota = buscarMascotaPorId($_GET['id_mascota']);

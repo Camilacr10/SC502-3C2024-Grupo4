@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const API_URL = 'backend/adopciones.php';
     const API_URL_Mascotas = 'backend/listadoMascotas.php';
+    const API_URL_Usuario = 'backend/usuario.php';
     const params = new URLSearchParams(window.location.search);
     const idMascota = params.get('id');
     const selectMascota = document.getElementById('mascota');
@@ -47,58 +48,75 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    document.getElementById('adopcionForm').addEventListener('submit', function (event) {
+    document.getElementById('adopcionForm').addEventListener('submit', async function (event) {
         event.preventDefault();
 
-        const idMascota = document.getElementById('mascota').value;
-        const razones = document.getElementById('razones').value;
+        try {
+            const response = await fetch(API_URL_Usuario);
+            const usuario = await response.json();
 
-        if (!idMascota || !razones) {
-            alert("Por favor, completa todos los campos.");
-            return;
+            if (response.ok) {
+                let usuarioActivo = usuario;
+
+                if (usuarioActivo === "Sesion no activa") {
+                    window.location.href = "Login.html";
+                } else {
+                    const idMascota = document.getElementById('mascota').value;
+                    const razones = document.getElementById('razones').value;
+
+                    if (!idMascota || !razones) {
+                        alert("Por favor, completa todos los campos.");
+                        return;
+                    }
+
+                    const idUsuario = 1; // esto es temporal
+
+                    const data = {
+                        id_usuario: idUsuario,
+                        id_mascota: idMascota,
+                        descripcion: razones
+                    };
+
+                    fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.message) {
+
+                                const mensaje = document.createElement("div");
+                                mensaje.className = "alert alert-success text-center mt-3";
+                                mensaje.textContent = "¡Tu solicitud ha sido enviada exitosamente! Muchas gracias por adoptar.";
+
+                                const formContainer = document.querySelector(".form-container");
+                                formContainer.appendChild(mensaje);
+
+                                this.reset();
+
+                                setTimeout(() => {
+                                    mensaje.remove();
+                                }, 5000);
+
+                                console.log(data.message); // Mostrar el mensaje de éxito
+                            } else {
+                                console.log("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            console.log("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
+                        });
+                }
+            }
+        } catch (err) {
+            console.error("Error al hacer fetch:", err);
         }
 
-        const idUsuario = 1; // esto es temporal
 
-        const data = {
-            id_usuario: idUsuario,
-            id_mascota: idMascota,
-            descripcion: razones
-        };
-
-        fetch(API_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.message) {
-
-                    const mensaje = document.createElement("div");
-                    mensaje.className = "alert alert-success text-center mt-3";
-                    mensaje.textContent = "¡Tu solicitud ha sido enviada exitosamente! Muchas gracias por adoptar.";
-
-                    const formContainer = document.querySelector(".form-container");
-                    formContainer.appendChild(mensaje);
-
-                    this.reset();
-
-                    setTimeout(() => {
-                        mensaje.remove();
-                    }, 5000);
-
-                    console.log(data.message); // Mostrar el mensaje de éxito
-                } else {
-                    console.log("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                console.log("Hubo un error al enviar la solicitud. Inténtalo de nuevo.");
-            });
     });
 
     obtenerMascotas();

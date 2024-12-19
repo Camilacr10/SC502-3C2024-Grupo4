@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="css/perfilUsuario_config.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="sidebar">
     <div class="sidebar-header">
@@ -15,29 +17,23 @@
     </div>
     <ul>
       <li><a href="Index.html"><img src="img/usuario/home.png" alt="Home icon" class="icon">Home</a></li>
-      <li><a href="donaciones.html"><img src="img/usuario/donar.png" alt="Donaciones icon" class="icon">Donaciones</a></li>
-      <li><a href="#"><img src="img/usuario/reporte.png" alt="Reportes icon" class="icon">Reportes</a></li>
-      <li><a href="inicioAdmin.html"><img src="img/usuario/admin.png" alt="Modo Administrador icon" class="icon">Modo Administrador</a></li>
-    </ul>    
+      <li><a href="donaciones.html"><img src="img/usuario/donar.png" alt="Donaciones icon" class="icon">Donaciones</a>
+      </li>
+    </ul>
     <div class="support">
-      <a href="#">
-          <img class="icon" src="img/usuario/soporte.png" alt="Soporte"> 
-          Soporte
+      <a href="acercaNosotros.html">
+        <img class="icon" src="img/usuario/soporte.png" alt="Soporte">
+        Soporte
       </a>
-      <a href="#">
-          <img class="icon" src="img/usuario/configuracion.png" alt="Configuraciones"> 
-          Configuraciones
-      </a>
-    </div>  
+    </div>
     <hr class="divider">
     <div class="user-info">
+      <button class="btn btn-danger rounded-pill" id="eliminarCuenta" style="border: none;">Eliminar Cuenta</button>
       <div class="user-details">
-          <p class="user-name">Olivia Rodriguez</p>
-          <span class="user-email">olivia@gmail.com</span>
       </div>
-      <a href="login.html">
+      <button id="logout-btn" style="border: none; background: transparent;">
         <img src="img/usuario/salir.png" alt="icono" class="user-icon">
-    </a> 
+      </button>
     </div>
   </div>
 
@@ -68,51 +64,58 @@
         </button>
       </div>
       <div class="profile-pic">
-        <img src="img/usuario/user.png" alt="User image">
+        <img src="img/usuario/mascota2.png" alt="User image">
       </div>
       <div class="settings">
         <h1>Editar Perfil</h1>
-        <span>olivia@gmail.com</span>
       </div>
+
       <div class="tabs">
-        <a href="perfilUsuarioSM.html">Sobre mí</a>
-        <a href="perfilUsuario.html" class="active">Perfil</a>
-        <a href="perfilUsuarioConfig.html">Contraseña</a>
+        <a class="active">Información personal</a>
       </div>
-      
-      <div class="bio-section">
-        
-        <div class="profile-image-section">
-          <h3>Cambiar imagen de perfil</h3>
-          <img src="img/usuario/user.png" alt="Imagen de perfil" class="profile-img">
-          <input type="file" id="profileImageInput" accept="image/*">
-        </div>
-      
-        <h3>Fotos en la portada</h3>
-        <div class="carousel-section">
-          <div class="card-group">
-            <div class="card">
-              <img src="img/usuario/gatos1.png.jpg" class="card-img-top" alt="Imagen en carrusel 1">
-              <div class="card-body">
-                <input type="file" id="carouselImage1Input" accept="image/*">
-              </div>
-            </div>
-            <div class="card">
-              <img src="img/usuario/perritos.png" class="card-img-top" alt="Imagen en carrusel 2">
-              <div class="card-body">
-                <input type="file" id="carouselImage2Input" accept="image/*">
-              </div>
-            </div>
-            <div class="card">
-              <img src="img/usuario/perritos2.png" class="card-img-top" alt="Imagen en carrusel 3">
-              <div class="card-body">
-                <input type="file" id="carouselImage3Input" accept="image/*">
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div class="form-container" style="width: 75%;">
+        <br><br>
+        <form id="usuarioForm">
+          <div class="mb-3"> <label for="username" class="form-label">Nombre de Usuario</label> <input type="text"
+              class="form-control" id="username" required> </div>
+          <div class="mb-3"> <label for="password" class="form-label">Contraseña</label> <input type="password"
+              class="form-control" id="password" required> </div>
+          <div class="mb-3"> <label for="nombre" class="form-label">Nombre</label> <input type="text"
+              class="form-control" id="nombre" required> </div>
+          <div class="mb-3"> <label for="apellido" class="form-label">Apellido</label> <input type="text"
+              class="form-control" id="apellido" required> </div>
+          <div class="mb-3"> <label for="correo" class="form-label">Correo Electrónico</label> <input type="email"
+              class="form-control" id="correo" required> </div>
+          <div class="mb-3"> <label for="telefono" class="form-label">Teléfono</label> <input type="text"
+              class="form-control" id="telefono"> </div>
+          </select>
+      </div> <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">¿Estás seguro?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmDelete">Eliminar Cuenta</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="js/perfilUsuario.js"></script>
 </body>
+
 </html>
