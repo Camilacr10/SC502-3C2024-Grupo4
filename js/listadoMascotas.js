@@ -48,5 +48,26 @@ document.addEventListener('DOMContentLoaded', function () {
             mascotasList.appendChild(mascotaCard);
         });
     }
+
+    document.getElementById('filtroMascotaForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const perroCheckbox = document.getElementById('perroCheckbox').checked;
+        const gatoCheckbox = document.getElementById('gatoCheckbox').checked;
+
+        const filtradorMascotas = () => {
+            const mascotasPerros = mascotas.filter(mascota => mascota.especie === 'Perro');
+            const mascotasGatos = mascotas.filter(mascota => mascota.especie === 'Gato');
+
+            return (perroCheckbox === true && gatoCheckbox === true) || (perroCheckbox === false && gatoCheckbox === false) ? mascotas :
+                    perroCheckbox === true && gatoCheckbox === false ? mascotasPerros:
+                    perroCheckbox === false && gatoCheckbox === true ? mascotasGatos: []
+        };
+
+        const mascotasFiltradas = filtradorMascotas();
+        console.log(mascotasFiltradas);
+        renderMascotas(mascotasFiltradas);
+
+    });
+
     loadMascotas();
 });

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mascotas = []; // Para almacenar mascotas
     const API_URL = 'backend/adminAdopciones.php';
     const API_URL_MASCOTAS = 'backend/listadoMascotas.php';
+    const API_URL_ADMINMASCOTAS = 'backend/adminMascota.php';
     const API_URL_USUARIOS = 'backend/adminUsuarios.php';
 
     async function loadAdopciones() {
@@ -153,10 +154,11 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const id_adopcion = parseInt(event.target.dataset.id);
             const adopcion = adopciones.find(a => a.id_adopcion === id_adopcion);
+            const mascota = mascotas.find(m => m.id_mascota === adopcion.id_mascota);
 
-            let response;
+            let response1;
 
-            response = await fetch(`${API_URL}?id_adopcion=${id_adopcion}`, {
+            response1 = await fetch(`${API_URL}?id_adopcion=${id_adopcion}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -170,7 +172,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 }),
                 credentials: 'include'
             });
-            if (response.ok) {
+
+            let response2;
+
+            response2 = await fetch(`${API_URL_ADMINMASCOTAS}?id_mascota=${mascota.id_mascota}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    nombre: mascota.nombre,
+                    edad: mascota.edad,
+                    especie: mascota.especie,
+                    raza: mascota.raza,
+                    peso: mascota.peso,
+                    sexo: mascota.sexo,
+                    castrado: mascota.castrado,
+                    vacunado: mascota.vacunado,
+                    desparasitado: mascota.desparasitado,
+                    descripcion: mascota.descripcion,
+                    fecha_rescate: mascota.fecha_rescate,
+                    ruta_imagen: mascota.ruta_imagen,
+                    disponibilidad: "0",
+                }),
+                credentials: 'include'
+            });
+            if (response1.ok && response2.ok) {
                 loadAdopciones();  // Recarga las adopciones después de la edición
             } else {
                 console.error("Sucedió un error");

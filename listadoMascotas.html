@@ -56,66 +56,22 @@
 
 
         <aside class="col-md-2 col-12 p-4 sidebar">
-            <form>
+            <form id="filtroMascotaForm">
                 <div class="mb-3">
                     <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Especie</h2>
                     <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="perro"
-                            name="tipo" value="perro">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="perroCheckbox"
+                            name="tipo" value="Perro">
                         <label class="form-check-label" for="perro">Perros</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="gato" name="tipo"
-                            value="gato">
+                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="gatoCheckbox" name="tipo"
+                            value="Gato">
                         <label class="form-check-label" for="gato">Gatos</label>
                     </div>
+                    <button class="btn-warning" type="submit">Filtrar</button>
                 </div>
-
                 <hr class="separator">
-
-                <div class="mb-3">
-                    <h2 class="filter-title"><i class="fas fa-chevron-down p-2"></i>Raza</h2>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="golden-retriever"
-                            name="Raza" value="golden-retriever">
-                        <label class="form-check-label" for="golden-retriever">Golden Retriever</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Poodle"
-                            name="Raza" value="Poodle">
-                        <label class="form-check-label" for="Poodle">Poodle</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Beagle"
-                            name="Raza" value="Beagle">
-                        <label class="form-check-label" for="Beagle">Beagle</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Chihuahua"
-                            name="Raza" value="Chihuahua">
-                        <label class="form-check-label" for="Chihuahua">Chihuahua</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Siamés"
-                            name="Raza" value="Siamés">
-                        <label class="form-check-label" for="Siamés">Siamés</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Persa"
-                            name="Raza" value="Persa">
-                        <label class="form-check-label" for="Persa">Persa</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Ragdoll"
-                            name="Raza" value="Ragdoll">
-                        <label class="form-check-label" for="Ragdoll">Ragdoll</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" style="margin-left: 20px;" type="checkbox" id="Otro" name="Raza"
-                            value="Otro">
-                        <label class="form-check-label" for="Otro">Otro</label>
-                    </div>
-
             </form>
         </aside>
 
