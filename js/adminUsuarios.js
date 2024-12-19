@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <td>${usuario.apellido}</td>
                 <td>${usuario.correo}</td>
                 <td>${usuario.telefono}</td>
-                <td>${usuario.activo ? "1" : "0"}</td>
+                <td>${usuario.activo ? "Si" : "No"}</td>
                 <td>
                     <button class="btn btn-success btn-sm edit-usuario" data-id="${usuario.id_usuario}">Editar</button>
                     <button class="btn btn-danger btn-sm delete-usuario" data-id="${usuario.id_usuario}">Eliminar</button>

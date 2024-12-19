@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <td>${mascota.raza}</td>
                 <td>${mascota.peso} kg</td>
                 <td>${mascota.sexo}</td>
-                <td>${mascota.castrado ? "1" : "0"}</td>
-                <td>${mascota.vacunado ? "1" : "0"}</td>
-                <td>${mascota.desparasitado ? "1" : "0"}</td>
-                <td>${mascota.disponibilidad ? "1" : "0"}</td>
+                <td>${mascota.castrado ? "Si" : "No"}</td>
+                <td>${mascota.vacunado ? "Si" : "No"}</td>
+                <td>${mascota.desparasitado ? "Si" : "No"}</td>
+                <td>${mascota.disponibilidad ? "Si" : "No"}</td>
                 <td>
                     <button class="btn btn-success btn-sm edit-mascota" data-id="${mascota.id_mascota}">Editar</button>
                     <button class="btn btn-danger btn-sm delete-mascota" data-id="${mascota.id_mascota}">Eliminar</button>
